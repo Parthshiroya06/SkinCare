@@ -1,0 +1,233 @@
+import { Dimensions } from "react-native";
+const { width, height } = Dimensions.get('screen');
+
+export const COLORS = {
+	primary: "#66A58A",
+	primaryLight: "rgba(102, 165, 137, 0.1)",
+	secondary: "#66A589",
+	success: "#159E42",
+	danger: "#FF3131",
+	warning: "#ffb02c",
+	dark: "#2f2f2f",
+	light: "#E6E6E6",
+	info: "#2B39B9",
+	white: "#fff",
+	label: "#8A8A8A",
+	backgroundColor: "#fff",
+	black: "#000",
+
+	//light theme
+	card: "#fff",
+	background: "#EDF6F2",
+	text: "#000000",
+	textLight: "#8A8A8A",
+	title: "#000000",
+	borderColor: "#BAD1C7",
+	input: "#F9F9F9",
+	placeholder: 'rgba(0, 0, 0, 0.50)',
+
+	//dark theme
+	darkCard: "#1C212E",
+	darkBackground: "#0C101C",
+	darkText: "#B8B8B8",
+	darkTextLight: "#6C6E77",
+	darkTitle: "#fff",
+	darkBorder: "rgba(255,255,255,0.2)",
+	darkInput: "#151A28",
+	darkborderColor: "rgba(255, 255, 255, .1)",
+	darkPlaceholder: "rgba(255,255,255,.5)",
+
+}
+
+export const SIZES = {
+	fontLg: 16,
+	font: 14,
+	fontSm: 13,
+	fontXs: 12,
+
+	//radius
+	radius_sm: 8,
+	radius: 6,
+	radius_lg: 15,
+
+	//space
+	padding: 15,
+	margin: 15,
+
+	//Font Sizes
+	h1: 40,
+	h2: 28,
+	h3: 24,
+	h4: 20,
+	h5: 18,
+	h6: 16,
+
+	//App dimensions
+	width,
+	height,
+
+	container: 800,
+};
+
+export const FONTS = {
+	fontLg: { fontSize: SIZES.fontLg, color: COLORS.text, lineHeight: 20, fontFamily: 'JostRegular' },
+	font: { fontSize: SIZES.font, color: COLORS.text, lineHeight: 20, fontFamily: 'JostRegular' },
+	fontSm: { fontSize: SIZES.fontSm, color: COLORS.text, lineHeight: 18, fontFamily: 'JostRegular' },
+	fontXs: { fontSize: SIZES.fontXs, color: COLORS.text, lineHeight: 14, fontFamily: 'JostRegular' },
+	h1: { fontSize: SIZES.h1, color: COLORS.title, fontFamily: 'JostSemiBold' },
+	h2: { fontSize: SIZES.h2, color: COLORS.title, fontFamily: 'JostSemiBold' },
+	h3: { fontSize: SIZES.h3, color: COLORS.title, fontFamily: 'JostSemiBold' },
+	h4: { fontSize: SIZES.h4, color: COLORS.title, fontFamily: 'JostSemiBold' },
+	h5: { fontSize: SIZES.h5, color: COLORS.title, fontFamily: 'JostSemiBold' },
+	h6: { fontSize: SIZES.h6, color: COLORS.title, fontFamily: 'JostSemiBold' },
+	fontBold: { fontFamily: 'JostBold' },
+	fontMedium: { fontFamily: 'JostMedium' },
+	fontTitle: { fontFamily: 'JostMedium' },
+	fontRegular: { fontFamily: 'JostRegular' },
+	fontSemiBold: { fontFamily: 'JostSemiBold' },
+	fontJostLight: { fontFamily: 'JostLight' },
+	Marcellus: { fontFamily: 'MarcellusRegular' },
+}
+
+export const IMAGES = {
+
+	user: require('../assets/images/user.png'),
+	logo: require('../assets/images/logo.png'),
+	card: require('../assets/images/card.png'),
+	card1: require('../assets/images/card1.png'),
+	border: require('../assets/images/border.png'),
+	border1: require('../assets/images/border1.png'),
+	border2: require('../assets/images/border2.png'),
+	cricle: require('../assets/images/cricle.png'),
+	googlemap: require('../assets/images/googlemap.png'),
+	sun: require('../assets/images/icons/sun.png'),
+	chat: require('../assets/images/icons/chat.png'),
+	ads: require('../assets/images/icons/ads.png'),
+	profile: require('../assets/images/icons/user3.png'),
+	user2: require('../assets/images/icons/user.png'),
+	card2: require('../assets/images/icons/card2.png'),
+	map: require('../assets/images/icons/map.png'),
+	map2: require('../assets/images/icons/map2.png'),
+	bell2: require('../assets/images/icons/bell2.png'),
+	comment: require('../assets/images/icons/comment.png'),
+	chat: require('../assets/images/icons/chat.png'),
+	star: require('../assets/images/icons/star.png'),
+	star2: require('../assets/images/icons/star2.png'),
+	star3: require('../assets/images/icons/star3.png'),
+	star4: require('../assets/images/icons/star4.png'),
+	star5: require('../assets/images/icons/Star5.png'),
+	star6: require('../assets/images/icons/Star6.png'),
+	translation: require('../assets/images/icons/translation.png'),
+	google2: require('../assets/images/icons/google2.png'),
+	arrowleft: require('../assets/images/icons/arrow-left.png'),
+	home: require('../assets/images/icons/home.png'),
+	document: require('../assets/images/icons/document.png'),
+	shopping: require('../assets/images/icons/shopping.png'),
+	shopping2: require('../assets/images/icons/shopping2.png'),
+	heart2: require('../assets/images/icons/heart2.png'),
+	bell: require('../assets/images/icons/bell.png'),
+	search: require('../assets/images/icons/search.png'),
+	close: require('../assets/images/icons/close.png'),
+	delete: require('../assets/images/icons/delete.png'),
+	check: require('../assets/images/icons/check.png'),
+	write: require('../assets/images/icons/write.png'),
+	shop: require('../assets/images/icons/shop.png'),
+	rightarrow: require('../assets/images/icons/rightarrow.png'),
+	plus: require('../assets/images/icons/plus.png'),
+	shieldcheck: require('../assets/images/icons/shieldcheck.png'),
+	bank: require('../assets/images/icons/bank.png'),
+	folder: require('../assets/images/icons/folder.png'),
+	payment: require('../assets/images/icons/payment.png'),
+	dollar: require('../assets/images/icons/dollar.png'),
+	downaeeowsmall: require('../assets/images/icons/downaeeowsmall.png'),
+	call: require('../assets/images/icons/call.png'),
+	send: require('../assets/images/icons/send.png'),
+	happy: require('../assets/images/icons/happy.png'),
+	phone: require('../assets/images/icons/phone.png'),
+	volume: require('../assets/images/icons/volume.png'),
+	audio: require('../assets/images/icons/audio.png'),
+	audiomute: require('../assets/images/icons/audiomute.png'),
+	components: require('../assets/images/icons/components.png'),
+	order: require('../assets/images/icons/order.png'),
+	producta: require('../assets/images/icons/producta.png'),
+	logout: require('../assets/images/icons/logout.png'),
+	grid: require('../assets/images/icons/grid.png'),
+	list: require('../assets/images/icons/list.png'),
+	arrowup: require('../assets/images/icons/arrowup.png'),
+	filter: require('../assets/images/icons/filter.png'),
+	moon: require('../assets/images/icons/moon.png'),
+	sun: require('../assets/images/icons/sun.png'),
+	facebook: require('../assets/images/icons/facebook.png'),
+	paws: require('../assets/images/icons/paws.png'),
+	Vector: require('../assets/images/icons/Vector.png'),
+	cuting: require('../assets/images/icons/cuting.png'),
+	playbtn: require('../assets/images/icons/playbtn.png'),
+
+
+
+	item1: require('../assets/images/item/pic1.png'),
+	item2: require('../assets/images/item/pic2.png'),
+	item3: require('../assets/images/item/pic3.png'),
+	item4: require('../assets/images/item/pic4.png'),
+	item5: require('../assets/images/item/pic5.png'),
+	item6: require('../assets/images/item/pic6.png'),
+	item7: require('../assets/images/item/pic7.png'),
+	item8: require('../assets/images/item/pic8.png'),
+	item9: require('../assets/images/item/pic9.png'),
+	item10: require('../assets/images/item/pic10.png'),
+	item11: require('../assets/images/item/pic11.png'),
+	item12: require('../assets/images/item/pic12.png'),
+	item13: require('../assets/images/item/pic13.png'),
+	item14: require('../assets/images/item/pic14.png'),
+	item15: require('../assets/images/item/pic15.png'),
+	item16: require('../assets/images/item/pic16.png'),
+	item21: require('../assets/images/item/pic21.png'),
+	item22: require('../assets/images/item/pic22.png'),
+	item23: require('../assets/images/item/pic23.png'),
+	item24: require('../assets/images/item/pic24.png'),
+	item25: require('../assets/images/item/pic25.png'),
+	item26: require('../assets/images/item/pic26.png'),
+	item32: require('../assets/images/item/pic32.png'),
+	item34: require('../assets/images/item/pic34.png'),
+	item38: require('../assets/images/item/pic38.png'),
+
+	
+	itemDetails1: require('../assets/images/itemDetails/pic1.png'),
+
+	small1: require('../assets/images/small/pic5.png'),
+	small2: require('../assets/images/small/pic6.png'),
+	small3: require('../assets/images/small/pic7.png'),
+	small4: require('../assets/images/small/pic8.png'),
+	small5: require('../assets/images/small/pic9.png'),
+	small6: require('../assets/images/small/pic10.png'),
+	small7: require('../assets/images/small/pic11.png'),
+
+	product1: require('../assets/images/product/pic1.png'),
+	product2: require('../assets/images/product/pic2.png'),
+	product3: require('../assets/images/product/pic3.png'),
+	product4: require('../assets/images/product/pic4.png'),
+	product5: require('../assets/images/product/pic5.png'),
+
+	ads1: require('../assets/images/ads/banner1.png'),
+	ads2: require('../assets/images/ads/banner2.png'),
+	ads3: require('../assets/images/ads/banner3.png'),
+
+
+
+
+
+
+}
+
+export const ICONS = {
+	user: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+	lock: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 12C4.44772 12 4 12.4477 4 13V20C4 20.5523 4.44772 21 5 21H19C19.5523 21 20 20.5523 20 20V13C20 12.4477 19.5523 12 19 12H5ZM2 13C2 11.3431 3.34315 10 5 10H19C20.6569 10 22 11.3431 22 13V20C22 21.6569 20.6569 23 19 23H5C3.34315 23 2 21.6569 2 20V13Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C10.9391 3 9.92172 3.42143 9.17157 4.17157C8.42143 4.92172 8 5.93913 8 7V11C8 11.5523 7.55228 12 7 12C6.44772 12 6 11.5523 6 11V7C6 5.4087 6.63214 3.88258 7.75736 2.75736C8.88258 1.63214 10.4087 1 12 1C13.5913 1 15.1174 1.63214 16.2426 2.75736C17.3679 3.88258 18 5.4087 18 7V11C18 11.5523 17.5523 12 17 12C16.4477 12 16 11.5523 16 11V7C16 5.93913 15.5786 4.92172 14.8284 4.17157C14.0783 3.42143 13.0609 3 12 3Z" /></svg>`,
+	eyeOpen: `<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.8475 7.43335C23.6331 7.1411 18.5245 0.277466 11.9999 0.277466C5.47529 0.277466 0.366469 7.1411 0.152297 7.43307C-0.0507657 7.71032 -0.0507657 8.08637 0.152297 8.36362C0.366469 8.65587 5.47529 15.5195 11.9999 15.5195C18.5245 15.5195 23.6331 8.65582 23.8475 8.36386C24.0508 8.08665 24.0508 7.71032 23.8475 7.43335ZM11.9999 13.9427C7.19382 13.9427 3.03127 9.38722 1.79907 7.89795C3.02968 6.40737 7.18351 1.85422 11.9999 1.85422C16.8057 1.85422 20.968 6.40896 22.2007 7.89902C20.9701 9.38955 16.8162 13.9427 11.9999 13.9427Z" fill="#FE4487"/><path d="M11.9998 3.16821C9.38224 3.16821 7.25256 5.29005 7.25256 7.89801C7.25256 10.506 9.38224 12.6278 11.9998 12.6278C14.6174 12.6278 16.7471 10.506 16.7471 7.89801C16.7471 5.29005 14.6174 3.16821 11.9998 3.16821ZM11.9998 11.0512C10.2547 11.0512 8.83502 9.6367 8.83502 7.89801C8.83502 6.15932 10.2547 4.74484 11.9998 4.74484C13.7449 4.74484 15.1646 6.15932 15.1646 7.89801C15.1646 9.6367 13.745 11.0512 11.9998 11.0512Z" fill="#FE4487"/></svg>`,
+	eyeClose: `<svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.8475 10.4333C23.6331 10.1411 18.5245 3.27747 11.9999 3.27747C5.47529 3.27747 0.366469 10.1411 0.152297 10.4331C-0.0507657 10.7103 -0.0507657 11.0864 0.152297 11.3636C0.366469 11.6559 5.47529 18.5195 11.9999 18.5195C18.5245 18.5195 23.6331 11.6558 23.8475 11.3639C24.0508 11.0866 24.0508 10.7103 23.8475 10.4333ZM11.9999 16.9427C7.19382 16.9427 3.03127 12.3872 1.79907 10.8979C3.02968 9.40737 7.18351 4.85422 11.9999 4.85422C16.8057 4.85422 20.968 9.40896 22.2007 10.899C20.9701 12.3896 16.8162 16.9427 11.9999 16.9427Z" fill="#FE4487"/><path d="M11.9998 6.16821C9.38224 6.16821 7.25256 8.29005 7.25256 10.898C7.25256 13.506 9.38224 15.6278 11.9998 15.6278C14.6174 15.6278 16.7471 13.506 16.7471 10.898C16.7471 8.29005 14.6174 6.16821 11.9998 6.16821ZM11.9998 14.0512C10.2547 14.0512 8.83502 12.6367 8.83502 10.898C8.83502 9.15932 10.2547 7.74484 11.9998 7.74484C13.7449 7.74484 15.1646 9.15932 15.1646 10.898C15.1646 12.6367 13.745 14.0512 11.9998 14.0512Z" fill="#FE4487"/><path d="M5 1L18.5 20" stroke="#FE4487" stroke-width="2"/></svg>`,
+	closeOpen: `<svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.8475 10.4333C23.6331 10.1411 18.5245 3.27747 11.9999 3.27747C5.47529 3.27747 0.366469 10.1411 0.152297 10.4331C-0.0507657 10.7103 -0.0507657 11.0864 0.152297 11.3636C0.366469 11.6559 5.47529 18.5195 11.9999 18.5195C18.5245 18.5195 23.6331 11.6558 23.8475 11.3639C24.0508 11.0866 24.0508 10.7103 23.8475 10.4333ZM11.9999 16.9427C7.19382 16.9427 3.03127 12.3872 1.79907 10.8979C3.02968 9.40737 7.18351 4.85422 11.9999 4.85422C16.8057 4.85422 20.968 9.40896 22.2007 10.899C20.9701 12.3896 16.8162 16.9427 11.9999 16.9427Z" fill="#FE9063"/><path d="M11.9998 6.16821C9.38224 6.16821 7.25256 8.29005 7.25256 10.898C7.25256 13.506 9.38224 15.6278 11.9998 15.6278C14.6174 15.6278 16.7471 13.506 16.7471 10.898C16.7471 8.29005 14.6174 6.16821 11.9998 6.16821ZM11.9998 14.0512C10.2547 14.0512 8.83502 12.6367 8.83502 10.898C8.83502 9.15932 10.2547 7.74484 11.9998 7.74484C13.7449 7.74484 15.1646 9.15932 15.1646 10.898C15.1646 12.6367 13.745 14.0512 11.9998 14.0512Z" fill="#FE9063"/><path d="M5 1L18.5 20" stroke="#FE9063" stroke-width="2"/></svg>`,
+	email: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 6L12 13L2 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+}
+
+const appTheme = { COLORS, SIZES, FONTS, IMAGES }
+
+export default appTheme;
