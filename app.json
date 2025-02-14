@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "glower",
-    "slug": "glower",
+    "name": "SkinSync",
+    "slug": "skin-sync",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

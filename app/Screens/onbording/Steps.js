@@ -30,7 +30,7 @@ const DATA = [
   },
 ];
 
-const SkinType = ({ navigation }) => {
+const Steps = ({ navigation }) => {
   const theme = useTheme();
   const { colors } = theme;
   const scrollRef = useRef();
@@ -39,37 +39,31 @@ const SkinType = ({ navigation }) => {
   const [sliderIndex, setSliderIndex] = useState(1);
 
   const onScroll = (val) => {
-    navigation.navigate("MainConcerns");
+    navigation.navigate("RegularRoutine");
   };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View style={[GlobalStyleSheet.container, { padding: 0, flex: 0.8 }]}>
-          <View>
+        <View
+          style={[
+            GlobalStyleSheet.container,
+            { padding: 0, flex: 0.8, justifyContent: "center" },
+          ]}
+        >
+          <View style={{ width: "90%", alignSelf: "center" }}>
             <Text
               style={{
                 marginTop: 10,
-                ...FONTS.Marcellus,
-                fontSize: 30,
+                ...FONTS.fontBold,
+                fontSize: 20,
                 fontWeight: "800",
                 textAlign: "center",
                 color: colors.title,
+                marginBottom: 10,
               }}
             >
-              {"What is your Skin Type"}
-            </Text>
-            <Text
-              style={{
-                marginVertical: 15,
-                ...FONTS.Marcellus,
-                fontSize: 18,
-                fontWeight: "600",
-                textAlign: "center",
-                color: colors.title,
-              }}
-            >
-              {"Please select all applies"}
+              {"How many stpes dose your skincare routine involve?"}
             </Text>
           </View>
           <View
@@ -78,27 +72,21 @@ const SkinType = ({ navigation }) => {
               { justifyContent: "center", paddingVertical: 5 },
             ]}
           >
-            {[
-              "Normal",
-              "Oily",
-              "Dry",
-              "Combination",
-              "Sensitive",
-              "Not Sure",
-              "Other",
-            ].map((item, index) => {
-              return (
-                <Button
-                  key={index}
-                  style={{ width: "80%", marginBottom: 20 }}
-                  title={item}
-                  size={"lg"}
-                  btnRounded
-                  color={colors.title}
-                  onPress={() => alert(`Selected ${item}`)}
-                />
-              );
-            })}
+            {["1-2 steps", "3-4 stpes", "5-6 stpes", "More then 6 stpes"].map(
+              (item, index) => {
+                return (
+                  <Button
+                    key={index}
+                    style={{ width: "80%", marginBottom: 20 }}
+                    title={item}
+                    size={"lg"}
+                    btnRounded
+                    color={colors.title}
+                    onPress={() => alert(`Selected ${item}`)}
+                  />
+                );
+              }
+            )}
           </View>
         </View>
 
@@ -189,4 +177,4 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
-export default SkinType;
+export default Steps;

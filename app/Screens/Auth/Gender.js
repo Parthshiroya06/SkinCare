@@ -15,7 +15,7 @@ import SocialBtn from "../../components/Socials/SocialBtn";
 import { Feather, FontAwesome } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
 
-const SignIn = ({ navigation }) => {
+const Gender = ({ navigation }) => {
   const theme = useTheme();
   const { colors } = theme;
 
@@ -59,7 +59,7 @@ const SignIn = ({ navigation }) => {
             <Text
               style={{ ...FONTS.Marcellus, fontSize: 28, color: COLORS.white }}
             >
-              Sign In To{"\n"}Your Account
+              SkinSync
             </Text>
           </View>
         </View>
@@ -98,7 +98,7 @@ const SignIn = ({ navigation }) => {
                   lineHeight: 28,
                 }}
               >
-                Welcome Back You've{"\n"}Been Missed!
+                Welcome back
               </Text>
               <View style={{ marginBottom: 15, marginTop: 20 }}>
                 <Text
@@ -108,7 +108,7 @@ const SignIn = ({ navigation }) => {
                     color: colors.title,
                   }}
                 >
-                  Email Address<Text style={{ color: "#FF0000" }}>*</Text>
+                  Your Name<Text style={{ color: "#FF0000" }}>*</Text>
                 </Text>
                 <CustomInput onChangeText={(value) => console.log(value)} />
               </View>
@@ -120,142 +120,97 @@ const SignIn = ({ navigation }) => {
                     color: colors.title,
                   }}
                 >
-                  Password<Text style={{ color: "#FF0000" }}>*</Text>
+                  Age<Text style={{ color: "#FF0000" }}>*</Text>
                 </Text>
                 <CustomInput
-                  type={"password"}
+                  //   type={"password"}
                   onChangeText={(value) => console.log(value)}
                 />
-                <TouchableOpacity
+              </View>
+              <View style={{ marginBottom: 15, marginTop: 20 }}>
+                <Text
                   style={{
-                    position: "absolute",
-                    bottom: -25,
-                    left: 0,
+                    ...FONTS.fontBold,
+                    fontSize: 25,
+                    color: colors.title,
+                    textAlign: "center",
                   }}
-                  onPress={() => navigation.navigate("ForgatPassword")}
                 >
-                  <Text
-                    style={{
-                      ...FONTS.fontRegular,
-                      fontSize: 15,
-                      color: colors.title,
-                      borderBottomWidth: 1,
-                      borderBottomColor: colors.title,
-                    }}
-                  >
-                    Forgot Password?
-                  </Text>
-                </TouchableOpacity>
+                  Gender
+                </Text>
+                <View style={{ flexDirection: "row" }}>
+                  <View style={{ width: 150, height: 200 }}>
+                    <Image
+                      style={{
+                        width: 120,
+                        height: 120,
+                        alignSelf: "center",
+                        aspectRatio: 1.5,
+                        tintColor: "black",
+                        resizeMode: "contain",
+                        marginTop: 10,
+                      }}
+                      source={IMAGES.female}
+                    />
+                    <Button
+                      style={{ height: 50 }}
+                      title={"Female"}
+                      btnRounded
+                      fullWidth
+                      onPress={() => alert("Selected Female")}
+                      color={colors.title}
+                    />
+                  </View>
+                  <View style={{ width: 150, height: 200, marginLeft: 10 }}>
+                    <Image
+                      style={{
+                        width: 120,
+                        height: 120,
+                        alignSelf: "center",
+                        aspectRatio: 1.5,
+                        tintColor: "black",
+                        resizeMode: "contain",
+                        marginTop: 10,
+                      }}
+                      source={IMAGES.male}
+                    />
+                    <Button
+                      style={{ height: 50 }}
+                      title={"Male"}
+                      btnRounded
+                      fullWidth
+                      onPress={() => alert("Selected Male")}
+                      color={colors.title}
+                    />
+                  </View>
+                </View>
+                <Text
+                  style={{
+                    ...FONTS.Marcellus,
+                    fontSize: 20,
+                    color: colors.title,
+                    lineHeight: 28,
+                    textAlign: "center",
+                  }}
+                >
+                  Prefer not to say
+                </Text>
               </View>
             </View>
           </View>
-          <View style={{ paddingHorizontal: 60, marginTop: -30 }}>
+          <View style={{ paddingHorizontal: 60, marginTop: -60 }}>
             <Button
-              title={"Sign In"}
+              title={"Next"}
               btnRounded
               fullWidth
-              icon={
-                <Feather size={24} color={colors.title} name={"arrow-right"} />
-              }
-              onPress={() => navigation.navigate("Gender")}
+              onPress={() => navigation.navigate("SkinType")}
               color={colors.title}
             />
           </View>
-        </View>
-        <View
-          style={[
-            GlobalStyleSheet.container,
-            { paddingHorizontal: 20, flex: 1 },
-          ]}
-        >
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              marginBottom: 30,
-            }}
-          >
-            <View
-              style={{
-                height: 1,
-                flex: 1,
-                backgroundColor: colors.title,
-              }}
-            />
-            <Text
-              style={{
-                ...FONTS.fontMedium,
-                color: colors.text,
-                marginHorizontal: 15,
-                fontSize: 13,
-              }}
-            >
-              Or continue with
-            </Text>
-            <View
-              style={{
-                height: 1,
-                flex: 1,
-                backgroundColor: colors.title,
-              }}
-            />
-          </View>
-          <View>
-            <View style={{ marginBottom: 20 }}>
-              <SocialBtn
-                icon={
-                  <Image
-                    style={{ height: 20, width: 20, resizeMode: "contain" }}
-                    source={IMAGES.google2}
-                  />
-                }
-                rounded
-                color={theme.dark ? "#000" : "#FFFFFF"}
-                text={"Sign in with google"}
-              />
-            </View>
-            <View>
-              <SocialBtn
-                icon={
-                  <FontAwesome name="apple" size={20} color={colors.title} />
-                }
-                rounded
-                color={theme.dark ? "#000" : "#FFFFFF"}
-                text={"Sign in with apple"}
-              />
-            </View>
-          </View>
-        </View>
-        <View
-          style={{
-            alignItems: "center",
-            flexDirection: "row",
-            justifyContent: "center",
-            flex: 1,
-          }}
-        >
-          <Text
-            style={{ ...FONTS.fontRegular, fontSize: 15, color: colors.title }}
-          >
-            Not a member?
-          </Text>
-          <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
-            <Text
-              style={{
-                ...FONTS.fontMedium,
-                borderBottomWidth: 1,
-                borderBottomColor: colors.title,
-                color: colors.title,
-              }}
-            >
-              {" "}
-              Create an account
-            </Text>
-          </TouchableOpacity>
         </View>
       </SafeAreaView>
     </ScrollView>
   );
 };
 
-export default SignIn;
+export default Gender;

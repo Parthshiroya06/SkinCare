@@ -30,7 +30,7 @@ const DATA = [
   },
 ];
 
-const SkinType = ({ navigation }) => {
+const UploadPhoto = ({ navigation }) => {
   const theme = useTheme();
   const { colors } = theme;
   const scrollRef = useRef();
@@ -39,25 +39,25 @@ const SkinType = ({ navigation }) => {
   const [sliderIndex, setSliderIndex] = useState(1);
 
   const onScroll = (val) => {
-    navigation.navigate("MainConcerns");
+    navigation.navigate("DrawerNavigation");
   };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View style={[GlobalStyleSheet.container, { padding: 0, flex: 0.8 }]}>
-          <View>
+          <View style={{ width: "90%", alignSelf: "center", marginTop: 100 }}>
             <Text
               style={{
                 marginTop: 10,
-                ...FONTS.Marcellus,
-                fontSize: 30,
+                ...FONTS.fontBold,
+                fontSize: 20,
                 fontWeight: "800",
                 textAlign: "center",
                 color: colors.title,
               }}
             >
-              {"What is your Skin Type"}
+              {"Would yop like to upload a photo of your skin?"}
             </Text>
             <Text
               style={{
@@ -69,7 +69,9 @@ const SkinType = ({ navigation }) => {
                 color: colors.title,
               }}
             >
-              {"Please select all applies"}
+              {
+                "Uploading a photo helps us provide a more accurate and presonalized skincare routine tailored to your needs"
+              }
             </Text>
           </View>
           <View
@@ -78,35 +80,29 @@ const SkinType = ({ navigation }) => {
               { justifyContent: "center", paddingVertical: 5 },
             ]}
           >
-            {[
-              "Normal",
-              "Oily",
-              "Dry",
-              "Combination",
-              "Sensitive",
-              "Not Sure",
-              "Other",
-            ].map((item, index) => {
-              return (
-                <Button
-                  key={index}
-                  style={{ width: "80%", marginBottom: 20 }}
-                  title={item}
-                  size={"lg"}
-                  btnRounded
-                  color={colors.title}
-                  onPress={() => alert(`Selected ${item}`)}
-                />
-              );
-            })}
+            {["Yes, upload a photo", "No, Continue whithout uploading"].map(
+              (item, index) => {
+                return (
+                  <Button
+                    key={index}
+                    style={{ width: "70%", marginBottom: 20, height: 100 }}
+                    title={item}
+                    size={"lg"}
+                    btnRounded
+                    color={colors.title}
+                    onPress={() => alert(`Click a photo`)}
+                  />
+                );
+              }
+            )}
           </View>
         </View>
 
         <View style={[GlobalStyleSheet.container, { paddingHorizontal: 40 }]}>
-          <TouchableOpacity style={{ width: "30%", alignSelf: "flex-end" }}>
+          <TouchableOpacity style={{ width: "90%", alignSelf: "flex-end" }}>
             <Button
               onPress={() => onScroll(sliderIndex)}
-              title={"Next"}
+              title={"Finish and Generate My Routine"}
               btnRounded
               color={colors.title}
             />
@@ -189,4 +185,4 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
-export default SkinType;
+export default UploadPhoto;

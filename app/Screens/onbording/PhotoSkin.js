@@ -30,7 +30,7 @@ const DATA = [
   },
 ];
 
-const SkinType = ({ navigation }) => {
+const PhotoSkin = ({ navigation }) => {
   const theme = useTheme();
   const { colors } = theme;
   const scrollRef = useRef();
@@ -39,53 +39,84 @@ const SkinType = ({ navigation }) => {
   const [sliderIndex, setSliderIndex] = useState(1);
 
   const onScroll = (val) => {
-    navigation.navigate("MainConcerns");
+    navigation.navigate("Steps");
   };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View style={[GlobalStyleSheet.container, { padding: 0, flex: 0.8 }]}>
-          <View>
+        <View
+          style={[
+            GlobalStyleSheet.container,
+            { padding: 0, flex: 0.8, justifyContent: "center", marginTop: 50 },
+          ]}
+        >
+          <View style={{ width: "75%", alignSelf: "center" }}>
             <Text
               style={{
-                marginTop: 10,
-                ...FONTS.Marcellus,
-                fontSize: 30,
+                marginVertical: 10,
+                ...FONTS.fontBold,
+                fontSize: 20,
                 fontWeight: "800",
                 textAlign: "center",
                 color: colors.title,
               }}
             >
-              {"What is your Skin Type"}
+              {"Do you currenlty follow a skincare routine?"}
             </Text>
-            <Text
+            <View
               style={{
-                marginVertical: 15,
-                ...FONTS.Marcellus,
-                fontSize: 18,
-                fontWeight: "600",
-                textAlign: "center",
-                color: colors.title,
+                flexDirection: "row",
+                width: "100%",
+                justifyContent: "space-between",
               }}
             >
-              {"Please select all applies"}
-            </Text>
+              <Button
+                style={{ width: "50%", marginBottom: 20 }}
+                title={"Yes"}
+                size={"lg"}
+                btnRounded
+                color={colors.title}
+                onPress={() => {}}
+              />
+              <Button
+                style={{ width: "50%", marginBottom: 20, marginLeft: 20 }}
+                title={"No"}
+                size={"lg"}
+                btnRounded
+                color={colors.title}
+                onPress={() => {}}
+              />
+            </View>
           </View>
           <View
             style={[
               GlobalStyleSheet.row,
-              { justifyContent: "center", paddingVertical: 5 },
+              {
+                justifyContent: "center",
+                alignSelf: "center",
+                width: "85%",
+                paddingVertical: 5,
+              },
             ]}
           >
+            <Text
+              style={{
+                marginVertical: 10,
+                ...FONTS.fontBold,
+                fontSize: 20,
+                fontWeight: "800",
+                textAlign: "center",
+                color: colors.title,
+              }}
+            >
+              {"if yes, how consistent are you with your routine?"}
+            </Text>
             {[
-              "Normal",
-              "Oily",
-              "Dry",
-              "Combination",
-              "Sensitive",
-              "Not Sure",
-              "Other",
+              "Always consistent",
+              "Mostly consistent",
+              "Occasionally consistent",
+              "Rarely consistent",
             ].map((item, index) => {
               return (
                 <Button
@@ -189,4 +220,4 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
-export default SkinType;
+export default PhotoSkin;

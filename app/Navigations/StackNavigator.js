@@ -63,6 +63,12 @@ import Toggles from "../Screens/Shortcode/Toggles";
 import Snackbars from "../Screens/Shortcode/Snakbars";
 import SkinType from "../Screens/onbording/SkinType";
 import MainConcerns from "../Screens/onbording/MainConcerns";
+import AskLogin from "../Screens/Auth/AskLogin";
+import Gender from "../Screens/Auth/Gender";
+import PhotoSkin from "../Screens/onbording/PhotoSkin";
+import Steps from "../Screens/onbording/Steps";
+import UploadPhoto from "../Screens/onbording/UploadPhoto";
+import RegularRoutine from "../Screens/onbording/RegularRoutine";
 
 const StackComponent = createStackNavigator();
 
@@ -76,7 +82,7 @@ const StackNavigator = () => {
         barStyle={theme.dark ? "light-content" : "dark-content"}
       />
       <StackComponent.Navigator
-        initialRouteName={"MainConcerns"}
+        initialRouteName={"Onbording"}
         detachInactiveScreens={true}
         screenOptions={{
           headerShown: false,
@@ -87,6 +93,15 @@ const StackNavigator = () => {
         <StackComponent.Screen name={"Damo"} component={Damo} />
         <StackComponent.Screen name={"Onbording"} component={Onbording} />
         <StackComponent.Screen name={"SkinType"} component={SkinType} />
+        <StackComponent.Screen name={"AskLogin"} component={AskLogin} />
+        <StackComponent.Screen name={"PhotoSkin"} component={PhotoSkin} />
+        <StackComponent.Screen name={"Steps"} component={Steps} />
+        <StackComponent.Screen name={"Gender"} component={Gender} />
+        <StackComponent.Screen name={"UploadPhoto"} component={UploadPhoto} />
+        <StackComponent.Screen
+          name={"RegularRoutine"}
+          component={RegularRoutine}
+        />
         <StackComponent.Screen name={"MainConcerns"} component={MainConcerns} />
         <StackComponent.Screen name={"SignIn"} component={SignIn} />
         <StackComponent.Screen name={"SignUp"} component={SignUp} />

@@ -39,7 +39,7 @@ const MainConcerns = ({ navigation }) => {
   const [sliderIndex, setSliderIndex] = useState(1);
 
   const onScroll = (val) => {
-    navigation.navigate("SignIn");
+    navigation.navigate("PhotoSkin");
   };
 
   return (
@@ -57,7 +57,7 @@ const MainConcerns = ({ navigation }) => {
                 color: colors.title,
               }}
             >
-              {"What is your main Concerns"}
+              {"What are your main Concerns?"}
             </Text>
             <Text
               style={{
@@ -97,80 +97,13 @@ const MainConcerns = ({ navigation }) => {
                   size={"lg"}
                   btnRounded
                   color={colors.title}
-                  onPress={() => navigation.navigate("SkinType")}
+                  onPress={() => alert(`Selected ${item}`)}
                 />
               );
             })}
           </View>
         </View>
-        {/* <View style={[{ marginTop: 10 }]}>
-          <View
-            style={[
-              styles.indicatorConatiner,
-              Platform.OS === "ios" && {
-                bottom: 10,
-              },
-            ]}
-            pointerEvents="none"
-          >
-            {DATA.map((x, i) => (
-              <Indicator i={i} key={i} scrollValue={scrollX} />
-            ))}
-          </View>
-          <ScrollView
-            // contentContainerStyle={{ marginTop: 20 }}
-            ref={scrollRef}
-            horizontal
-            pagingEnabled
-            scrollEventThrottle={16}
-            decelerationRate="fast"
-            showsHorizontalScrollIndicator={false}
-            //contentContainerStyle={{ height: 50 }}
-            onScroll={Animated.event(
-              [{ nativeEvent: { contentOffset: { x: scrollX } } }],
-              { useNativeDriver: false }
-            )}
-          >
-            {DATA.map((data, index) => (
-              <View
-                style={[
-                  styles.slideItem,
-                  Platform.OS === "ios" &&
-                    {
-                      // paddingBottom:35
-                    },
-                ]}
-                key={index}
-              >
-                <View style={{ paddingHorizontal: 30 }}>
-                  <Text
-                    style={{
-                      ...FONTS.Marcellus,
-                      fontSize: 30,
-                      textAlign: "left",
-                      color: colors.title,
-                    }}
-                  >
-                    {data.title}
-                  </Text>
-                  <Text
-                    style={{
-                      ...FONTS.fontRegular,
-                      fontSize: 18,
-                      textAlign: "left",
-                      lineHeight: 24,
-                      color: colors.title,
-                      paddingTop: 10,
-                      paddingRight: 50,
-                    }}
-                  >
-                    {data.desc}
-                  </Text>
-                </View>
-              </View>
-            ))}
-          </ScrollView>
-        </View> */}
+
         <View style={[GlobalStyleSheet.container, { paddingHorizontal: 20 }]}>
           <TouchableOpacity style={{ width: "30%", alignSelf: "flex-end" }}>
             <Button

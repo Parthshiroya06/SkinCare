@@ -30,7 +30,7 @@ const DATA = [
   },
 ];
 
-const SkinType = ({ navigation }) => {
+const RegularRoutine = ({ navigation }) => {
   const theme = useTheme();
   const { colors } = theme;
   const scrollRef = useRef();
@@ -39,25 +39,27 @@ const SkinType = ({ navigation }) => {
   const [sliderIndex, setSliderIndex] = useState(1);
 
   const onScroll = (val) => {
-    navigation.navigate("MainConcerns");
+    navigation.navigate("UploadPhoto");
   };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View style={[GlobalStyleSheet.container, { padding: 0, flex: 0.8 }]}>
-          <View>
+          <View style={{ width: "90%", alignSelf: "center", marginTop: 10 }}>
             <Text
               style={{
                 marginTop: 10,
-                ...FONTS.Marcellus,
-                fontSize: 30,
+                ...FONTS.fontBold,
+                fontSize: 20,
                 fontWeight: "800",
                 textAlign: "center",
                 color: colors.title,
               }}
             >
-              {"What is your Skin Type"}
+              {
+                "Which of the following products do you regularly use in your routine?"
+              }
             </Text>
             <Text
               style={{
@@ -79,13 +81,13 @@ const SkinType = ({ navigation }) => {
             ]}
           >
             {[
-              "Normal",
-              "Oily",
-              "Dry",
-              "Combination",
-              "Sensitive",
-              "Not Sure",
-              "Other",
+              "Cleanser",
+              "Toner",
+              "Moisturise",
+              "Sunscreen",
+              "Serum",
+              "Exfoliator",
+              "Other..",
             ].map((item, index) => {
               return (
                 <Button
@@ -189,4 +191,4 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
-export default SkinType;
+export default RegularRoutine;

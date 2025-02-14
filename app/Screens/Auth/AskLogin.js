@@ -30,7 +30,7 @@ const DATA = [
   },
 ];
 
-const Onbording = ({ navigation }) => {
+const AskLogin = ({ navigation }) => {
   const theme = useTheme();
   const { colors } = theme;
   const scrollRef = useRef();
@@ -39,136 +39,73 @@ const Onbording = ({ navigation }) => {
   const [sliderIndex, setSliderIndex] = useState(1);
 
   const onScroll = (val) => {
-    if (sliderIndex == 3) {
-      navigation.navigate("AskLogin");
-    }
-    // console.log(scrollX);
-    scrollRef.current?.scrollTo({
-      // x: val.nativeEvent.contentOffset.x,
-      x: SIZES.width * val,
-      animated: true,
-    });
-
-    setSliderIndex(sliderIndex + 1);
+    navigation.navigate(val);
   };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View style={[GlobalStyleSheet.container, { padding: 0, flex: 0.8 }]}>
-          <View
-            style={[GlobalStyleSheet.row, { justifyContent: "space-between" }]}
-          >
-            <View
-              style={[
-                GlobalStyleSheet.col50,
-                {
-                  transform: [{ rotate: "-41.8deg" }],
-                  height: undefined,
-                  aspectRatio: 1 / 1.5,
-                  backgroundColor: "#C7C8CC",
-                  marginTop: -100,
-                  marginLeft: -40,
-                  overflow: "hidden",
-                  borderBottomLeftRadius: 160,
-                  borderBottomRightRadius: 160,
-                  borderTopRightRadius: 100,
-                },
-              ]}
+        <View
+          style={[
+            GlobalStyleSheet.container,
+            { justifyContent: "center", padding: 0, flex: 0.8 },
+          ]}
+        >
+          <View>
+            <Text
+              style={{
+                marginTop: 10,
+                ...FONTS.Marcellus,
+                fontSize: 30,
+                fontWeight: "800",
+                textAlign: "center",
+                color: colors.title,
+              }}
             >
-              <Image
-                style={{
-                  width: "100%",
-                  height: undefined,
-                  aspectRatio: 2.4 / 3.2,
-                  transform: [{ rotate: "41.8deg" }, { scale: 1.1 }],
-                  marginTop: 60,
-                  marginLeft: 25,
-                }}
-                source={IMAGES.item1}
-              />
-            </View>
-            <View
-              style={[
-                GlobalStyleSheet.col50,
-                {
-                  width: 144,
-                  height: 144,
-                  borderRadius: 100,
-                  backgroundColor: COLORS.white,
-                  marginRight: 50,
-                  marginTop: -30,
-                  alignItems: "center",
-                },
-              ]}
-            >
-              <Image
-                style={{
-                  resizeMode: "contain",
-                  width: 73,
-                  height: 110,
-                  marginTop: 40,
-                }}
-                source={IMAGES.item3}
-              />
-            </View>
+              {"SkinCare"}
+            </Text>
           </View>
+          <Image
+            style={{
+              width: "80%",
+              height: undefined,
+              alignSelf: "center",
+              aspectRatio: 1.5,
+
+              marginTop: 52,
+            }}
+            source={IMAGES.sinkcare1}
+          />
           <View
-            style={[GlobalStyleSheet.row, { justifyContent: "space-between" }]}
+            style={[
+              GlobalStyleSheet.row,
+              { justifyContent: "center", marginTop: 50 },
+            ]}
           >
-            <View
-              style={[
-                GlobalStyleSheet.col50,
-                {
-                  width: 190,
-                  height: 190,
-                  borderRadius: 150,
-                  backgroundColor: COLORS.white,
-                  marginLeft: -30,
-                  marginTop: 70,
-                  overflow: "visible",
-                },
-              ]}
-            >
-              <Image
-                style={{
-                  height: 240,
-                  width: 95,
-                  marginLeft: 47,
-                  marginTop: -60,
-                }}
-                source={IMAGES.item21}
-              />
-            </View>
-            <View
-              style={[
-                GlobalStyleSheet.col50,
-                {
-                  transform: [{ rotate: "-135deg" }],
-                  height: undefined,
-                  aspectRatio: 1 / 1,
-                  backgroundColor: "#D2C1AF",
-                  marginTop: "-60%",
-                  marginRight: -80,
-                  overflow: "hidden",
-                  borderRadius: 160,
-                },
-              ]}
-            >
-              <Image
-                style={{
-                  width: "100%",
-                  height: undefined,
-                  aspectRatio: 1 / 1.3,
-                  transform: [{ rotate: "135deg" }, { scale: 1.5 }],
-                  marginTop: 52,
-                }}
-                source={IMAGES.item2}
-              />
-            </View>
+            <Button
+              style={{ width: "80%" }}
+              title={"I'm a new, Sign me up"}
+              size={"lg"}
+              btnRounded
+              color={colors.title}
+              onPress={() => {
+                onScroll("SignUp");
+              }}
+            />
+            <Button
+              style={{ width: "80%", marginTop: 20 }}
+              title={"I'm a already a member"}
+              size={"lg"}
+              btnRounded
+              color={colors.title}
+              onPress={() => {
+                onScroll("SignIn");
+              }}
+            />
           </View>
         </View>
-        <View style={[{ marginTop: 10 }]}>
+
+        {/* <View style={[{ marginTop: 10 }]}>
           <View
             style={[
               styles.indicatorConatiner,
@@ -235,36 +172,17 @@ const Onbording = ({ navigation }) => {
               </View>
             ))}
           </ScrollView>
-        </View>
-        <View style={[GlobalStyleSheet.container, { paddingHorizontal: 40 }]}>
-          <View
-            style={[
-              GlobalStyleSheet.row,
-              { justifyContent: "space-between", alignItems: "center" },
-            ]}
-          >
-            <TouchableOpacity onPress={() => navigation.navigate("SignIn")}>
-              <Text
-                style={{
-                  ...FONTS.fontRegular,
-                  fontSize: 16,
-                  color: colors.title,
-                  textDecorationLine: "underline",
-                }}
-              >
-                Skip
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={{ width: "30%" }}>
-              <Button
-                onPress={() => onScroll(sliderIndex)}
-                title={"Next"}
-                btnRounded
-                color={colors.title}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
+        </View> */}
+        {/* <View style={[GlobalStyleSheet.container, { paddingHorizontal: 40 }]}>
+          <TouchableOpacity style={{ width: "30%", alignSelf: "flex-end" }}>
+            <Button
+              onPress={() => onScroll(sliderIndex)}
+              title={"Next"}
+              btnRounded
+              color={colors.title}
+            />
+          </TouchableOpacity>
+        </View> */}
       </ScrollView>
     </SafeAreaView>
   );
@@ -342,4 +260,4 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
-export default Onbording;
+export default AskLogin;
