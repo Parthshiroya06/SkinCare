@@ -28,21 +28,39 @@ import { openDrawer } from "../../redux/actions/drawerAction";
 const Swiper1Data = [
   {
     image: IMAGES.item9,
+    name: "Cleanse: Twice per day, morning and night",
   },
   {
-    image: IMAGES.item8,
+    image: IMAGES.item39,
+    name: "Tone: Essence, Facial Mist or Toner",
   },
   {
-    image: IMAGES.item10,
+    image: IMAGES.item40,
+    name: "Exfoliate: Once or twice per week",
   },
   {
-    image: IMAGES.item9,
+    image: IMAGES.item41,
+    name: "Mask: Once or twice per week",
   },
   {
-    image: IMAGES.item8,
+    image: IMAGES.item42,
+    name: "Treat: Serum: Concentrate or Facial Oil",
   },
   {
-    image: IMAGES.item10,
+    image: IMAGES.item43,
+    name: "Moisturize: Twice per day, morning and night",
+  },
+  {
+    image: IMAGES.item44,
+    name: "Eye Care: Twice per day, morning and night",
+  },
+  {
+    image: IMAGES.item45,
+    name: "Protect/SPF: Daily, or as required",
+  },
+  {
+    image: IMAGES.item46,
+    name: "Body Care: Daily, or as required",
   },
 ];
 
@@ -539,7 +557,7 @@ const Home = () => {
                   lineHeight: 33,
                 }}
               >
-                A New Generation{"\n"}of Natural Cosmetic{"\n"}Ingredients
+                {"Your personalised \nSkincare routine"}
               </Text>
             </View>
 

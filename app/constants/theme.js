@@ -206,6 +206,14 @@ export const IMAGES = {
   item32: require("../assets/images/item/pic32.png"),
   item34: require("../assets/images/item/pic34.png"),
   item38: require("../assets/images/item/pic38.png"),
+  item39: require("../assets/images/item/tone_image.png"),
+  item40: require("../assets/images/item/exfoliation_image.png"),
+  item41: require("../assets/images/item/mask_image.png"),
+  item42: require("../assets/images/item/treat_image.png"),
+  item43: require("../assets/images/item/moisturize_images.png"),
+  item44: require("../assets/images/item/eyecare_Images.png"),
+  item45: require("../assets/images/item/protect_images.png"),
+  item46: require("../assets/images/item/bodyCare_image.png"),
 
   itemDetails1: require("../assets/images/itemDetails/pic1.png"),
 
