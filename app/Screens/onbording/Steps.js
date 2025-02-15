@@ -63,7 +63,7 @@ const Steps = ({ navigation }) => {
                 marginBottom: 10,
               }}
             >
-              {"How many stpes dose your skincare routine involve?"}
+              {"How many steps dose your skincare routine involve?"}
             </Text>
           </View>
           <View

@@ -89,7 +89,7 @@ const Profile = ({ navigation }) => {
     <SafeAreaView style={{ backgroundColor: colors.background, flex: 1 }}>
       {theme.dark ? null : (
         <LinearGradient
-          colors={["#97D7BA", "#EBF4F0"]}
+          colors={["#F4C2C2", "#FDEDF3"]}
           style={{ width: "100%", height: 230, top: 0, position: "absolute" }}
         ></LinearGradient>
       )}

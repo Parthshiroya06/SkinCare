@@ -62,7 +62,7 @@ const AskLogin = ({ navigation }) => {
                 color: colors.title,
               }}
             >
-              {"SkinCare"}
+              {"SkinSync"}
             </Text>
           </View>
           <Image

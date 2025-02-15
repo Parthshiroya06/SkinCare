@@ -48,7 +48,7 @@ const SignIn = ({ navigation }) => {
               style={{
                 width: 600,
                 height: 500,
-                backgroundColor: "#001E11",
+                backgroundColor: "#6A1B4D",
                 borderRadius: 250,
                 position: "absolute",
                 opacity: 0.7,
@@ -72,7 +72,7 @@ const SignIn = ({ navigation }) => {
           <View
             style={[
               {
-                shadowColor: "rgba(150, 184, 169, 0.25)",
+                shadowColor: colors.primaryLight,
                 shadowOffset: {
                   width: 2,
                   height: 2,
