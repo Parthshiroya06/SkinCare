@@ -82,7 +82,7 @@ const StackNavigator = () => {
         barStyle={theme.dark ? "light-content" : "dark-content"}
       />
       <StackComponent.Navigator
-        initialRouteName={"DrawerNavigation"}
+        initialRouteName={"Onbording"}
         detachInactiveScreens={true}
         screenOptions={{
           headerShown: false,
